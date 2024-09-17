@@ -25,6 +25,10 @@
 			width: 13px;
 			height: 15px;
 		}
+
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 
 	&__link {
@@ -34,6 +38,7 @@
 	&__select,
 	&__currency,
 	&__cart {
+		cursor: pointer;
 		color: #000000;
 		border: none;
 		text-decoration: none;
@@ -43,6 +48,10 @@
 		@media (max-width: 1000px) {
 			font-size: 11px;
 			line-height: 14.03px;
+		}
+
+		&:hover {
+			opacity: 0.8;
 		}
 	}
 
@@ -56,6 +65,7 @@
 		position: absolute;
 		left: 50%;
 		transform: translate(-50%);
+		width: 293px;
 		@media (max-width: 1000px) {
 			width: 110px;
 		}

@@ -11,6 +11,7 @@
 		text-align: center;
 	}
 	&__logo {
+		width: 293px;
 		@media (max-width: 800px) {
 			margin-bottom: 10px;
 			order: 1;
@@ -25,10 +26,13 @@
 			font-weight: 300;
 			line-height: 14.03px;
 		}
+
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 
 	&__links {
-		// height: 103px;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;

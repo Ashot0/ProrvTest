@@ -4,22 +4,31 @@
 			<div class="header__left">
 				<router-link class="header__link" to="/">Головна</router-link>
 				<select class="header__select" name="shop" id="shop">
-					<option value="shop">Магазин</option>
-					<option value="shop">Магазин</option>
-					<option value="shop">Магазин</option>
-					<option value="shop">Магазин</option>
+					<option
+						v-for="shopOption in shopOptions"
+						:key="shopOption.value"
+						:value="shopOption.value"
+					>
+						{{ shopOption.text }}
+					</option>
 				</select>
 				<select class="header__select" name="collections" id="collections">
-					<option value="collections">Колекції</option>
-					<option value="collections">Колекції</option>
-					<option value="collections">Колекції</option>
-					<option value="collections">Колекції</option>
+					<option
+						v-for="collectionOption in collectionOptions"
+						:key="collectionOption.value"
+						:value="collectionOption.value"
+					>
+						{{ collectionOption.text }}
+					</option>
 				</select>
 			</div>
 			<button type="button" class="header__burger">
-				<img src="@/assets/icons/Burger.png" alt="" srcset="" />
+				<img src="@/assets/icons/Burger.png" alt="Menu" />
 			</button>
-			<img class="header__logo" src="@/assets/images/Logo.png" />
+			<router-link class="header__logo" to="/"
+				><img src="@/assets/images/Logo.png" alt="Company Logo"
+			/></router-link>
+
 			<div class="header__right">
 				<button class="header__currency" type="button">UA/UAH</button>
 				<router-link class="header__cart" to="/cart">Кошик [ ]</router-link>
@@ -32,7 +41,24 @@
 export default {
 	name: 'Header',
 	setup() {
-		return {};
+		const shopOptions = [
+			{ value: 'shop', text: 'Магазин' },
+			{ value: 'shop', text: 'Магазин' },
+			{ value: 'shop', text: 'Магазин' },
+			{ value: 'shop', text: 'Магазин' },
+		];
+
+		const collectionOptions = [
+			{ value: 'collections', text: 'Колекції' },
+			{ value: 'collections', text: 'Колекції' },
+			{ value: 'collections', text: 'Колекції' },
+			{ value: 'collections', text: 'Колекції' },
+		];
+
+		return {
+			shopOptions,
+			collectionOptions,
+		};
 	},
 };
 </script>
