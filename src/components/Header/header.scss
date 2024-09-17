@@ -1,0 +1,68 @@
+.header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__wrapper {
+		width: 1240px;
+		padding: 10px 30px;
+		height: 40px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__left {
+		display: flex;
+		gap: 38px;
+		@media (max-width: 1000px) {
+			display: none;
+		}
+	}
+	&__burger {
+		display: none;
+		@media (max-width: 1000px) {
+			display: block;
+			width: 13px;
+			height: 15px;
+		}
+	}
+
+	&__link {
+		margin-right: 2px;
+	}
+	&__link,
+	&__select,
+	&__currency,
+	&__cart {
+		color: #000000;
+		border: none;
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 17.85px;
+		@media (max-width: 1000px) {
+			font-size: 11px;
+			line-height: 14.03px;
+		}
+	}
+
+	&__currency {
+		@media (max-width: 1000px) {
+			display: none;
+		}
+	}
+
+	&__logo {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+		@media (max-width: 1000px) {
+			width: 110px;
+		}
+	}
+
+	&__right {
+		display: flex;
+		gap: 37px;
+	}
+}

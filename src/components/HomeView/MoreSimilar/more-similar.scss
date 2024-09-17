@@ -1,0 +1,55 @@
+.more-similar {
+	padding: 0 50px 100px 50px;
+	@media (max-width: 800px) {
+		padding: 0 10px 50px 10px;
+	}
+	&__title {
+		margin-bottom: 51px;
+		font-family: "Cormorant Garamond";
+		font-size: 32px;
+		font-weight: 300;
+		line-height: 38.75px;
+		@media (max-width: 800px) {
+			font-size: 16px;
+			line-height: 19.38px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__wrapper {
+		gap: 20px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__block {
+		width: 100%;
+	}
+	@media (max-width: 800px) {
+		&__block:nth-child(n + 3) {
+			display: none;
+		}
+	}
+
+	&__image {
+		object-fit: cover;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	&__des {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__price,
+	&__name {
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 20.4px;
+		text-align: left;
+		@media (max-width: 800px) {
+			font-size: 11px;
+			line-height: 14.03px;
+		}
+	}
+}
